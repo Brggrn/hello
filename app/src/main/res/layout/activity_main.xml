@@ -7,10 +7,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
     tools:context=".view.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello KAJSAAAAAA wwaaaooo!" />
+        android:text="Hello KAJSAAAAAA wwaaaooo!"
+        android:id="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bubble"
+        android:id="@+id/imageButton" />
+
 </RelativeLayout>
