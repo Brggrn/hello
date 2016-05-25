@@ -11,7 +11,7 @@ package="com.kache.hello">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".view.GameActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+    <activity android:name=".view.GameActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
     </activity>
     <activity android:name=".view.HelpActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
 

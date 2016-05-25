@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/colorVeryDark"
-    android:id = "@+id/my_game_layout"
-    >
+    android:background="@drawable/space"
+    android:id="@+id/my_game_layout"
+    tools:context="com.kache.hello.view.GameActivity">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -13,7 +15,8 @@
         android:background="@drawable/bubblebtn"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imageButton2"
-        android:layout_toEndOf="@+id/imageButton2" />
+        android:layout_toEndOf="@+id/imageButton2"
+    />
 
     <LinearLayout
         android:id="@+id/fragment_container"

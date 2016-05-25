@@ -18,17 +18,12 @@ import com.kache.hello.R;
 
 public class GameActivity extends AppCompatActivity {
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        FragmentManager fm = getFragmentManager();
+/*
+       FragmentManager fm = getFragmentManager();
         // Begin the transaction
         FragmentTransaction ft =getSupportFragmentManager().beginTransaction();
         FragmentBubbleworld fragBubb = new FragmentBubbleworld();
@@ -54,9 +49,6 @@ public class GameActivity extends AppCompatActivity {
 
         });
     }
+*/
 
-
-
-
-
-}
+    }}
