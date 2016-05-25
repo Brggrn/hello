@@ -5,6 +5,8 @@ import android.os.Bundle;
 import com.kache.hello.R;
 
 
+import com.kache.hello.R;
+
 public class HelpActivity extends AppCompatActivity {
 
     @Override
