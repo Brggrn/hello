@@ -6,12 +6,14 @@
     android:id = "@+id/my_game_layout"
     >
 
-    <ImageView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/bubblebtn"/>
+        android:id="@+id/imageButton3"
+        android:background="@drawable/bubblebtn"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageButton2"
+        android:layout_toEndOf="@+id/imageButton2" />
 
     <LinearLayout
         android:id="@+id/fragment_container"
@@ -27,10 +29,22 @@
 
     </LinearLayout>
 
-    <ImageView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:background="@drawable/bubblebtn" />
+        android:id="@+id/imageButton2"
+        android:background="@drawable/bubblebtn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:background="@drawable/bubblebtn"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/fragment_container"
+        android:layout_toEndOf="@+id/fragment_container" />
+
 
 </RelativeLayout>
