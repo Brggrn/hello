@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import com.kache.hello.R;
 
 public class MainActivity extends AppCompatActivity {
-    Button helpButton;
+    ImageButton helpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
