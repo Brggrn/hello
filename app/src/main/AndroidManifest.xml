@@ -12,14 +12,9 @@ package="com.kache.hello">
         </intent-filter>
     </activity>
     <activity android:name=".view.GameActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-        <intent-filter>
-
-        </intent-filter>
     </activity>
     <activity android:name=".view.HelpActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-        <intent-filter>
 
-        </intent-filter>
     </activity>
 
 </application>
