@@ -62,7 +62,7 @@
         android:id="@+id/helpButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/helpIcon"
+        android:src="@drawable/helpicon"
         android:scaleType="fitCenter"
         android:background="@null"
         android:paddingBottom="0dp"
