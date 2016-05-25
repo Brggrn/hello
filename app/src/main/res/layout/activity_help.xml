@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/space"
+    tools:context="com.kache.hello.view.HelpActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewSettings"
+        android:src="@drawable/settings"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewgame"
+        android:src="@drawable/game"
+        android:layout_above="@+id/imageLibrary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageLibrary"
+        android:src="@drawable/library"
+        android:layout_alignBottom="@+id/CloudGame"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewProfile"
+        android:src="@drawable/profile"
+        android:layout_alignBottom="@+id/CloudLibrary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:id="@+id/CloudSetting"
+        android:src="@drawable/cloudSetting"
+        android:layout_above="@+id/imageViewgame"
+        android:layout_toRightOf="@+id/imageViewSettings"
+        android:layout_toEndOf="@+id/imageViewSettings" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:id="@+id/CloudGame"
+        android:src="@drawable/cloudGame"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:id="@+id/CloudLibrary"
+        android:src="@drawable/cloudLibrary"
+        android:layout_below="@+id/imageViewSettings"
+        android:layout_toRightOf="@+id/imageLibrary"
+        android:layout_toEndOf="@+id/imageLibrary"
+        android:layout_marginTop="39dp" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:id="@+id/CloudProfile"
+        android:src="@drawable/cloudProfile"
+        android:layout_alignTop="@+id/imageLibrary"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp" />
+
+
+</RelativeLayout>
