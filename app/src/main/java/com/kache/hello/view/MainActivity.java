@@ -9,26 +9,34 @@ import android.widget.ImageButton;
 
 import com.kache.hello.R;
 
-public class MainActivity extends AppCompatActivity {
-    ImageButton helpButton;
-    ImageButton gameButton;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         // Get the view from activity_main.xml
         setContentView(R.layout.activity_main);
-
+        ImageButton helpButton;
+        ImageButton gameButton;
         // Locate the button in activity_main.xml
         helpButton = (ImageButton) findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(this);
         gameButton = (ImageButton) findViewById(R.id.gameButton);
+        gameButton.setOnClickListener(this);
+
 
         // Capture button clicks
-        helpButton.setOnClickListener(new View.OnClickListener() {
+
+    }
+
+
+
             public void onClick(View arg0) {
                 switch (arg0.getId()) {
                     case R.id.helpButton: {
                         // Start NewActivity.class
-                        Intent myIntent = new Intent(MainActivity.this,
+                        Intent myIntent = new Intent(this,
                                 HelpActivity.class);
                         startActivity(myIntent);
                         break;
@@ -36,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.gameButton: {
                         // do something for button 2 click
-                        Intent intent = new Intent(MainActivity.this, GameActivity.class);
+                        Intent intent = new Intent(this, GameActivity.class);
                         startActivity(intent);
                         break;
 
@@ -45,6 +53,4 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-        }});
-}
-    }
+        }}
