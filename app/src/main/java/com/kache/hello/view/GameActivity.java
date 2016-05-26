@@ -17,34 +17,28 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.kache.hello.R;
 
 public class GameActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
        FragmentManager fm = getFragmentManager();
-        // Begin the transaction
-        FragmentTransaction ft =getSupportFragmentManager().beginTransaction();
-        FragmentBubbleworld fragBubb = new FragmentBubbleworld();
-        ft.add(R.id.my_game_layout, fragBubb, "worldFragment");
-        addShowHideListener(R.id.bubbla, fragBubb);
-
-// Replace the contents of the container with the new fragment
-        ft.replace(R.id.fragment_container, new FragmentBubbleworld());
-// Complete the changes added above
-        ft.commit();
+        addShowHideListener(new FragmentBubbleworld());
 
     }
 
-    void addShowHideListener(int buttonId, final Fragment fragment) {
-        final ImageButton button = (ImageButton) findViewById(buttonId);
+    void addShowHideListener(final Fragment fragment) {
+        final ImageButton button = (ImageButton) findViewById(R.id.bubbla);
         button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.show(fragment);
-                ft.commit();
+               if(fragment.isAdded()){
+                   ft.show(fragment);
+
+               }else{
+                   ft.add(R.id.fragment_container, fragment,"A");}
+
+                   ft.commit();
             }
 
         });

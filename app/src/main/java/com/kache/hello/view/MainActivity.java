@@ -49,6 +49,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 startActivity(intent);
                 break;
             }
-
+            case R.id.bubble: {
+                Intent intent = new Intent(this, StartGameActivity.class);
+                startActivity(intent);
+                break;
+            }
             }
         }}

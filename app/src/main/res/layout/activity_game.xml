@@ -18,19 +18,22 @@
         android:layout_toEndOf="@+id/imageButton2"
     />
 
-    <LinearLayout
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:id="@+id/bubbla"
+        android:background="@drawable/bubblebtn"
+
+        />
+
+    <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="77dp"
-        android:layout_height="87dp">
+        android:layout_height="87dp"
+        android:layout_alignBottom="@+id/imageButton"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="62dp"
-            android:id="@+id/bubbla"
-            android:background="@drawable/bubblebtn"
-            />
-
-    </LinearLayout>
+    </FrameLayout>
 
     <ImageButton
         android:layout_width="wrap_content"
