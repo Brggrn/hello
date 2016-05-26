@@ -21,6 +21,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         ImageButton helpButton;
         ImageButton gameButton;
         ImageButton libraryButton;
+        ImageButton startButton;
 
         // Locate the button in activity_main.xml
         helpButton = (ImageButton) findViewById(R.id.helpButton);
@@ -29,6 +30,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         gameButton.setOnClickListener(this);
         libraryButton = (ImageButton) findViewById(R.id.libraryButton);
         libraryButton.setOnClickListener(this);
+        startButton = (ImageButton) findViewById(R.id.bubble);
+        startButton.setOnClickListener(this);
     }
     public void onClick(View arg0) {
         switch (arg0.getId()) {

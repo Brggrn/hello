@@ -7,9 +7,15 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="98dp"
-        android:layout_height="101dp"
+        android:layout_width="63dp"
+        android:layout_height="58dp"
         android:background="@drawable/earthfragment"
         android:layout_gravity="center_horizontal|top" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/earthButton"
+        android:layout_gravity="center" />
 
 </FrameLayout>
