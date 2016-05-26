@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="library">
+        <item >Algoritm</item>
+        <item >Array</item>
+        <item >Arv</item>
+        <item >Booelan</item>
+        <item >Debug</item>
+        <item >Inkapsling</item>
+        <item >Integer</item>
+        <item >Klass</item>
+        <item >Kompilator</item>
+        <item >Konstruktor</item>
+        <item >Loop</item>
+        <item >Metod</item>
+        <item >Objekt</item>
+        <item >Objektorienterat</item>
+        <item >Polymorfism</item>
+        <item >Programmering</item>
+        <item >Privat klass</item>
+        <item >Program</item>
+        <item >Publik klass</item>
+        <item >Return</item>
+        <item >Språk</item>
+        <item >String</item>
+        <item >Variabel</item>
+    </string-array>
+
+</resources>

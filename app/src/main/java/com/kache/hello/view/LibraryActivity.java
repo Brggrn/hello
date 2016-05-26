@@ -1,52 +1,73 @@
 package com.kache.hello.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.kache.hello.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class LibraryActivity extends AppCompatActivity {
-    ListView list;
-    private List<String> List_file;
+    //Defining android ListView
+    /*ListView mListView;
+
+    //Elements that will be displayed in android ListView
+    String[] Countries = new String[]{"India", "Australia", "Newzealand",
+            "Indonesia", "China", "Russia", "Japan", "South Korea"};*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-        //http://www.tutorialspoint.com/android/android_list_view.htm
-      //  ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_library, mobileArray);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_library);
 
-        //ListView listView = (ListView) findViewById(R.id.library_list);
-        //listView.setAdapter(adapter);
+      /*  mListView = (ListView) findViewById(R.id.library_list);
 
+        //Declaring Array adapter
+        ArrayAdapter<String> countryAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Countries);
 
-        List_file =new ArrayList<String>();
-        list = (ListView)findViewById(R.id.library_list);
-
-        CreateListView();
-    }
-    private void CreateListView() {
-        List_file.add("Coderzheaven");
-        List_file.add("Google");
-        List_file.add("Android");
-        List_file.add("iPhone");
-        List_file.add("Apple");
-        //Create an adapter for the listView and add the ArrayList to the adapter.
-        list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,List_file));
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //Setting the android ListView's adapter to the newly created adapter
+        mListView.setAdapter(countryAdapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                //args2 is the listViews Selected index
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //The position where the list item is clicked is obtained from the
+                //the parameter position of the android listview
+                int itemPosition = position;
+
+                //Get the String value of the item where the user clicked
+                String itemValue = (String) mListView.getItemAtPosition(position);
+
+                //In order to start displaying new activity we need an intent
+                Intent intent = new Intent(getApplicationContext(),HelpActivity.class);
+
+                //Putting the Id of image as an extra in intent
+                //intent.putExtra("flag",FlagId[position]);
+
+                //Here we will pass the previously created intent as parameter
+                startActivity(intent);
+
             }
-        });
-    }
-}
+        });*/
+        ListView listview = (ListView) findViewById(R.id.library_list);
+       // listview.setOnItemClickListener(this);
+
+    /*public void onItemClick(AdapterView<String> l, View v, int position, long id) {
+        Log.i("HelloListView", "You clicked Item: " + id + " at position:" + position);
+        // Then you start a new Activity via Intent
+        Intent intent = new Intent();
+        //intent.setClass(this, ListItemDetail.class);
+        intent.putExtra("position", position);
+        // Or / And
+        intent.putExtra("id", id);
+        startActivity(intent);*/
+
+}}
