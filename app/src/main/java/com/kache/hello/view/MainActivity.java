@@ -20,38 +20,35 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);
         ImageButton helpButton;
         ImageButton gameButton;
+        ImageButton libraryButton;
+
         // Locate the button in activity_main.xml
         helpButton = (ImageButton) findViewById(R.id.helpButton);
         helpButton.setOnClickListener(this);
         gameButton = (ImageButton) findViewById(R.id.gameButton);
         gameButton.setOnClickListener(this);
-
-
-        // Capture button clicks
-
+        libraryButton = (ImageButton) findViewById(R.id.libraryButton);
+        libraryButton.setOnClickListener(this);
     }
-
-
-
-            public void onClick(View arg0) {
-                switch (arg0.getId()) {
-                    case R.id.helpButton: {
-                        // Start NewActivity.class
-                        Intent myIntent = new Intent(this,
-                                HelpActivity.class);
-                        startActivity(myIntent);
-                        break;
-                    }
-
-                    case R.id.gameButton: {
-                        // do something for button 2 click
-                        Intent intent = new Intent(this, GameActivity.class);
-                        startActivity(intent);
-                        break;
-
-
-
-                }
+    public void onClick(View arg0) {
+        switch (arg0.getId()) {
+            case R.id.helpButton: {
+                // Start NewActivity.class
+                Intent myIntent = new Intent(this, HelpActivity.class);
+                startActivity(myIntent);
+                break;
+            }
+            case R.id.gameButton: {
+                // do something for button 2 click
+                Intent intent = new Intent(this, GameActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.libraryButton: {
+                Intent intent = new Intent(this, LibraryActivity.class);
+                startActivity(intent);
+                break;
+            }
 
             }
         }}
