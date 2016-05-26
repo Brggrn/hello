@@ -1,73 +1,44 @@
 package com.kache.hello.view;
 
-import android.content.Intent;
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kache.hello.R;
 
-public class LibraryActivity extends AppCompatActivity {
-    //Defining android ListView
-    /*ListView mListView;
+public class LibraryActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    //Elements that will be displayed in android ListView
-    String[] Countries = new String[]{"India", "Australia", "Newzealand",
-            "Indonesia", "China", "Russia", "Japan", "South Korea"};*/
+    ListView listView;
+    String[] library;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_library);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
-      /*  mListView = (ListView) findViewById(R.id.library_list);
+        library = getResources().getStringArray(R.array.library);
 
-        //Declaring Array adapter
-        ArrayAdapter<String> countryAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Countries);
+        listView = (ListView) findViewById(R.id.library_list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, library);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
+    }
 
-        //Setting the android ListView's adapter to the newly created adapter
-        mListView.setAdapter(countryAdapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //The position where the list item is clicked is obtained from the
-                //the parameter position of the android listview
-                int itemPosition = position;
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        TextView textView = (TextView) view;
+        Toast.makeText(this, textView.getText(), Toast.LENGTH_SHORT).show();
+    }
 
-                //Get the String value of the item where the user clicked
-                String itemValue = (String) mListView.getItemAtPosition(position);
 
-                //In order to start displaying new activity we need an intent
-                Intent intent = new Intent(getApplicationContext(),HelpActivity.class);
-
-                //Putting the Id of image as an extra in intent
-                //intent.putExtra("flag",FlagId[position]);
-
-                //Here we will pass the previously created intent as parameter
-                startActivity(intent);
-
-            }
-        });*/
-        ListView listview = (ListView) findViewById(R.id.library_list);
-       // listview.setOnItemClickListener(this);
-
-    /*public void onItemClick(AdapterView<String> l, View v, int position, long id) {
-        Log.i("HelloListView", "You clicked Item: " + id + " at position:" + position);
-        // Then you start a new Activity via Intent
-        Intent intent = new Intent();
-        //intent.setClass(this, ListItemDetail.class);
-        intent.putExtra("position", position);
-        // Or / And
-        intent.putExtra("id", id);
-        startActivity(intent);*/
-
-}}
+}
